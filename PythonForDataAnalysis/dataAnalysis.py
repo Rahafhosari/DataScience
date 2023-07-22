@@ -5,6 +5,7 @@
 # and standard deviation of the data. 
 # Use appropriate control flow statements to compute these statistics and return the dictionary.
 import statistics
+import math
 
 def data_analysis(inputList):
     dict = {}
@@ -12,9 +13,15 @@ def data_analysis(inputList):
     print("LENGTH",len(sortedList))
     print(sortedList)
     
-    min = sortedList[0]
-    max = sortedList[len(sortedList)-1]
+    minimun = sortedList[0]
+    maximum = sortedList[len(sortedList)-1]
+    #max =  sortedList[-1]
    
+    #if list not sorted
+    minValue = min(inputList)
+    maxValue = max(inputList)
+    print("MIN: ",str(minValue)," MAX: ",str(maxValue))
+
     # median1 = statistics.median(inputList)
     # print(median1)
     
@@ -32,8 +39,8 @@ def data_analysis(inputList):
     #mean
     mean = sum/len(sortedList)
 
-    dict['min'] = min
-    dict['max'] = max
+    dict['min'] = minimun
+    dict['max'] = maximum
     dict['mean'] = mean
     dict['median'] = median
     print(dict)
